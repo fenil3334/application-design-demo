@@ -2,6 +2,7 @@ import 'package:application_design_demo/bloc/dio_cubit.dart';
 import 'package:application_design_demo/connectivityBloc/InternetCubit.dart';
 import 'package:application_design_demo/controlers/adapter.dart';
 import 'package:application_design_demo/datamodel/person_model.dart';
+import 'package:application_design_demo/screens/otp_screen.dart';
 import 'package:application_design_demo/screens/splashscreen.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class HomePage extends StatelessWidget {
           theme: ThemeData(
             primaryColor: Colors.blue
           ),
-          home: const SplashSCreen(),
+          home:  OTPScreen(),
         ),
     );
   }
