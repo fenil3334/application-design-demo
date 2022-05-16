@@ -1,3 +1,4 @@
+import 'package:application_design_demo/widget/circular_bar_typec.dart';
 import 'package:flutter/material.dart';
 
 class MyRadioOption<T> extends StatelessWidget {
@@ -86,6 +87,8 @@ class _CustomRadioExampleState extends State<CustomRadioExample> {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+
     return new Scaffold(
       appBar: AppBar(
         title: const Text('Woolha.com Flutter Tutorial'),
@@ -128,6 +131,9 @@ class _CustomRadioExampleState extends State<CustomRadioExample> {
             label: 'E',
             text: 'Five',
           ),
+
+
+          new CircularProgressc(size: width/3, color: Colors.green, backgroundColor: Colors.blue,)
         ],
       ),
     );
