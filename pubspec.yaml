@@ -50,6 +50,10 @@ dependencies:
   email_validator: ^2.0.1
   connectivity_plus: ^2.2.1
 
+  sticky_headers: ^0.2.0
+
+  sticky_grouped_list: ^2.0.0
+  flutter_list_view: ^1.1.14
 
 dev_dependencies:
   flutter_test:

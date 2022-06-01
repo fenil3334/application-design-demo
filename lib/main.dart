@@ -5,6 +5,7 @@ import 'package:application_design_demo/datamodel/person_model.dart';
 import 'package:application_design_demo/screens/custom_radio_button.dart';
 import 'package:application_design_demo/screens/listview_searchview.dart';
 import 'package:application_design_demo/screens/otp_screen.dart';
+import 'package:application_design_demo/screens/pagination_listview.dart';
 import 'package:application_design_demo/screens/splashscreen.dart';
 import 'package:application_design_demo/screens/tab/tab_layout_screen.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -36,7 +37,8 @@ class HomePage extends StatelessWidget {
           theme: ThemeData(
             primaryColor: Colors.blue
           ),
-          home:  ListviewSearchview(),
+         // home:  ListviewSearchview(),
+          home:  PaginationListView(),
         ),
     );
   }
