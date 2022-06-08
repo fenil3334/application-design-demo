@@ -37,8 +37,8 @@ class HomePage extends StatelessWidget {
           theme: ThemeData(
             primaryColor: Colors.blue
           ),
-         // home:  ListviewSearchview(),
-          home:  PaginationListView(),
+          home:  ListviewSearchview(),
+         // home:  PaginationListView(),
         ),
     );
   }
