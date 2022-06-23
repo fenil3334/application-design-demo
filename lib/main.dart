@@ -2,6 +2,7 @@ import 'package:application_design_demo/bloc/dio_cubit.dart';
 import 'package:application_design_demo/connectivityBloc/InternetCubit.dart';
 import 'package:application_design_demo/controlers/adapter.dart';
 import 'package:application_design_demo/datamodel/person_model.dart';
+import 'package:application_design_demo/screens/carsoual_slider_screen.dart';
 import 'package:application_design_demo/screens/custom_radio_button.dart';
 import 'package:application_design_demo/screens/file_pick_from_storage.dart';
 import 'package:application_design_demo/screens/home_screen.dart';
@@ -51,8 +52,9 @@ class HomePage extends StatelessWidget {
             primaryColor: Colors.blue,
           ),
         //  home:  ListviewSearchview(),
-         // home:  PaginationListView(),
-          home:  FilePickFromStorage(),
+          home:  PaginationListView(),
+         // home:  FilePickFromStorage(),
+         // home:  CarsulaSliderScreen(),
         ),
     );
   }

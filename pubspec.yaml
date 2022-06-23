@@ -59,6 +59,9 @@ dependencies:
   flutter_pdfview: ^1.2.2
   flutter_filereader: ^3.0.0
 
+  carousel_slider: ^4.1.1
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

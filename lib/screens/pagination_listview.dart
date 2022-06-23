@@ -84,10 +84,22 @@ class _PaginationListViewState extends State<PaginationListView> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
-                                  Text(
+                                 controler.chatlist[i].type.toString()==TYPE_TEXT  ?  Text(
                                     controler.chatlist[i].message + "    :   " + i.toString(),
                                     style: TextStyle(color: Colors.black, fontSize: 15),
-                                  ),
+                                  ) : Container(width: 30,
+                                 height: 25,
+                                 decoration: BoxDecoration(
+                                   borderRadius: BorderRadius.circular(100),
+                                   color: Colors.blue
+                                 ),
+                                 child: Center(
+                                   child: Text(
+                                     controler.chatlist[i].image,
+                                     style: TextStyle(color: Colors.white, fontSize: 15),
+                                   ),
+                                 ),
+                                 ),
                                   Obx(
                                       ()=> IconButton(
                                         onPressed: () {

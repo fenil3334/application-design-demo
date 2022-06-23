@@ -4,6 +4,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+const TYPE_TEXT="1";
+const TYPE_IMAGE="2";
+const img_1="1";
+const img_2="2";
+const img_3="3";
+const img_4="4";
+const img_5="5";
+const img_6="6";
+const img_7="7";
+const img_8="8";
+const img_9="9";
+
 class ChatControler extends GetxController {
   RxList<ChatModel> chatlist = RxList([]);
   List<AssignModel> assignTempList=[];
@@ -33,38 +45,38 @@ class ChatControler extends GetxController {
         isloadmore.value = false;
         new Future.delayed(const Duration(seconds: 7), () {
           chatlist.add(
-            ChatModel("hiiii", '5 May 2022'),
+            ChatModel("hiiii", '5 May 2022',TYPE_TEXT,'',),
           );
-          chatlist.add(ChatModel("hiiii 32", '5 May 2022'));
-          chatlist.add(ChatModel("hiiii 32", '5 May 2022'));
+          chatlist.add(ChatModel("hiiii 32", '5 May 2022',TYPE_TEXT,'',));
+          chatlist.add(ChatModel("hiiii 32", '5 May 2022',TYPE_IMAGE,img_6,));
           chatlist.add(
-            ChatModel("hiiii 33", '5 May 2022'),
-          );
-          chatlist.add(
-            ChatModel("hiiii 34", '5 May 2022'),
+            ChatModel("hiiii 33", '5 May 2022',TYPE_TEXT,'',),
           );
           chatlist.add(
-            ChatModel("hiiii 35", '5 May 2022'),
+            ChatModel("hiiii 34", '5 May 2022',TYPE_IMAGE,img_7,),
           );
           chatlist.add(
-            ChatModel("hiiii 36", '5 May 2022'),
+            ChatModel("hiiii 35", '5 May 2022',TYPE_TEXT,'',),
           );
           chatlist.add(
-            ChatModel("hiiii 37", '5 May 2022'),
+            ChatModel("hiiii 36", '5 May 2022',TYPE_TEXT,'',),
           );
           chatlist.add(
-            ChatModel("hiiii 38", '6 May 2022'),
+            ChatModel("hiiii 37", '5 May 2022',TYPE_IMAGE,img_8,),
           );
           chatlist.add(
-            ChatModel("hiiii 39", '6 May 2022'),
+            ChatModel("hiiii 38", '6 May 2022',TYPE_TEXT,'',),
           );
-          chatlist.add(ChatModel("hiiii 10", '6 May 2022'));
-          chatlist.add(ChatModel("hiiii 11", '6 May 2022'));
-          chatlist.add(ChatModel("hiiii 12", '6 May 2022'));
-          chatlist.add(ChatModel("hiiii 13", '6 May 2022'));
-          chatlist.add(ChatModel("hiiii 14", '6 May 2022'));
-          chatlist.add(ChatModel("hiiii 15", '6 May 2022'));
-          chatlist.add(ChatModel("hiiii 16", '6 May 2022'));
+          chatlist.add(
+            ChatModel("hiiii 39", '6 May 2022',TYPE_TEXT,'',),
+          );
+          chatlist.add(ChatModel("hiiii 10", '6 May 2022',TYPE_TEXT,'',));
+          chatlist.add(ChatModel("hiiii 11", '6 May 2022',TYPE_TEXT,'',));
+          chatlist.add(ChatModel("hiiii 12", '6 May 2022',TYPE_TEXT,'',));
+          chatlist.add(ChatModel("hiiii 13", '6 May 2022',TYPE_IMAGE,img_9,));
+          chatlist.add(ChatModel("hiiii 14", '6 May 2022',TYPE_TEXT,'',));
+          chatlist.add(ChatModel("hiiii 15", '6 May 2022',TYPE_TEXT,'',));
+          chatlist.add(ChatModel("hiiii 16", '6 May 2022',TYPE_TEXT,'',));
 
           chatlist.refresh();
           print('----Refresh-----${chatlist.length}');
@@ -80,38 +92,38 @@ class ChatControler extends GetxController {
 
   getChats() {
     chatlist.add(
-      ChatModel("hiiii", '2 May 2022', isLike: false.obs),
+      ChatModel("hiiii", '2 May 2022',TYPE_TEXT,'', isLike: false.obs),
     );
-    chatlist.add(ChatModel("hiiii 1", '2 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 2", '2 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 3", '2 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 4", '2 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 5", '2 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 6", '3 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 7", '3 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 8", '3 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 9", '3 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 10", '3 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 11", '3 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 12", '3 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 13", '3 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 14", '3 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 15", '3 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 16", '3 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 17", '4 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 18", '4 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 19", '4 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 20", '4 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 21", '4 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 22", '4 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 23", '5 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 24", '5 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 25", '5 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 26", '5 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 27", '5 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 28", '5 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 29", '5 May 2022', isLike: false.obs));
-    chatlist.add(ChatModel("hiiii 30", '5 May 2022', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 1", '2 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 2", '2 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 3", '2 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 4", '2 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 5", '2 May 2022',TYPE_IMAGE,img_1, isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 6", '3 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 7", '3 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 8", '3 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 9", '3 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 10", '3 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 11", '3 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 12", '3 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 13", '3 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 14", '3 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 15", '3 May 2022',TYPE_IMAGE,img_2, isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 16", '3 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 17", '4 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 18", '4 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 19", '4 May 2022',TYPE_IMAGE,img_3, isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 20", '4 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 21", '4 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 22", '4 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 23", '5 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 24", '5 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 25", '5 May 2022',TYPE_IMAGE,img_4, isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 26", '5 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 27", '5 May 2022', TYPE_TEXT,'',isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 28", '5 May 2022',TYPE_IMAGE,img_5, isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 29", '5 May 2022',TYPE_TEXT,'', isLike: false.obs));
+    chatlist.add(ChatModel("hiiii 30", '5 May 2022',TYPE_TEXT,'', isLike: false.obs));
   }
 
 
