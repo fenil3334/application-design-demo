@@ -142,7 +142,7 @@ class ProductScreen extends StatelessWidget {
                                         const SizedBox(width: 10,),
 
                                         Expanded(
-                                          child: RaisedButton(
+                                          child: MaterialButton(
                                             textColor: Colors.white,
                                             color: Colors.red,
                                             splashColor: Colors.transparent,

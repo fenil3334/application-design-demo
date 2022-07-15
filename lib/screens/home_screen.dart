@@ -1,4 +1,5 @@
 import 'package:application_design_demo/screens/custom_calndar.dart';
+import 'package:application_design_demo/screens/custom_map_marker_screen.dart';
 import 'package:application_design_demo/screens/dio_screen.dart';
 import 'package:application_design_demo/screens/google_map_screen.dart';
 import 'package:application_design_demo/screens/hive_database_screen.dart';
@@ -7,7 +8,9 @@ import 'package:application_design_demo/screens/login_witn_bloc.dart';
 import 'package:application_design_demo/screens/movie_screen.dart';
 import 'package:application_design_demo/screens/listview_checkbox.dart';
 import 'package:application_design_demo/screens/product_screen.dart';
+import 'package:application_design_demo/screens/spiral_matrix.dart';
 import 'package:application_design_demo/screens/sqlite_database_screen.dart';
+import 'package:application_design_demo/utils/size_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -48,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-
+    SizeUtils().sizeUnit(context);
    /* value: const SystemUiOverlayStyle(
       statusBarColor: Colors.white, //i like transaparent :-)
       systemNavigationBarColor: Colors.white, // navigation bar color
@@ -67,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   height: 40,
                   width: double.infinity,
-                  child: RaisedButton(
+                  child: MaterialButton(
                     textColor: Colors.white,
                     color: Colors.blue,
                     child: const Text("Movie Screen",
@@ -91,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   height: 40,
                   width: double.infinity,
-                  child: RaisedButton(
+                  child: MaterialButton(
                     textColor: Colors.white,
                     color: Colors.blue,
                     splashColor: Colors.transparent,
@@ -363,6 +366,72 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
 
+                const SizedBox(height: 16,),
+
+
+
+                SizedBox(
+                  height: 40,
+                  width: double.infinity,
+                  child: MaterialButton(
+                    shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(50.0))),
+                    elevation: 0,
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    disabledElevation: 0,
+                    hoverElevation: 0,
+                    focusElevation: 0,
+                    color: Colors.blue,
+                    child: const Text('Spiral Matrix',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600
+                      ),),
+
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) {return SpiralMatrixScreen();}));
+                    },
+
+                  ),
+                ),
+
+
+
+                const SizedBox(height: 16,),
+
+
+
+
+                SizedBox(
+                  height: 40,
+                  width: double.infinity,
+                  child: MaterialButton(
+                    shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(50.0))),
+                    elevation: 0,
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    disabledElevation: 0,
+                    hoverElevation: 0,
+                    focusElevation: 0,
+                    color: Colors.blue,
+                    child: const Text('Google Map Marker Info Window',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600
+                      ),),
+
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) {return CustomMapMarkerScreen();}));
+                    },
+
+                  ),
+                ),
+
+
+
+                const SizedBox(height: 16,),
               ],
             ),
           ),
